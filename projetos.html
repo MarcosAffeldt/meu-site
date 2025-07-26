@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projetos - Marcos Dilvane</title>
+  <meta name="description" content="Projetos em elétrica, informática e automação por Marcos Dilvane." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+  <nav style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 60px; font-family: 'Inter', sans-serif;">
+      <a href="index.html" style="font-weight: 600; color: #1a3c6e; font-size: 1.2rem;">Marcos Dilvane</a>
+      <div class="nav-links" style="display: flex; gap: 2rem;">
+        <a href="index.html" style="color: #1a3c6e; text-decoration: none; font-weight: 500;">Início</a>
+        <a href="projetos.html" style="color: #444; text-decoration: none; font-weight: 500;">Projetos</a>
+        <a href="limpeza-computador.html" style="color: #444; text-decoration: none; font-weight: 500;">Artigos</a>
+        <a href="contato.html" style="color: #444; text-decoration: none; font-weight: 500;">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="animate" style="margin-top: 60px; padding: 4rem 2rem; text-align: center; background: #f0f4ff;">
+    <h1>Meus Projetos</h1>
+    <p>Conheça alguns trabalhos práticos em elétrica, informática e automação</p>
+  </header>
+
+  <main>
+    <div class="projects-grid">
+
+      <!-- Projeto 1 -->
+      <article class="project-card animate" data-delay="0.2s">
+        <div class="project-img">⚡</div>
+        <div class="project-content">
+          <h3 class="project-title">Automação de Portão com Relé</h3>
+          <p class="project-desc">Projeto de automação residencial utilizando relé 12V e fonte chaveada. Controle remoto simples e seguro.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Elétrica</span>
+            <span class="tech-tag">Relés</span>
+            <span class="tech-tag">12V</span>
+          </div>
+          <a href="contato.html" class="btn">Saber mais</a>
+        </div>
+      </article>
+
+      <!-- Projeto 2: Limpeza de PC -->
+      <article class="project-card animate" data-delay="0.3s">
+        <div class="project-img">🧹</div>
+        <div class="project-content">
+          <h3 class="project-title">Limpeza Completa de Computador</h3>
+          <p class="project-desc">Limpeza profissional interna e externa de desktop: remoção de poeira, reaplicação de pasta térmica e verificação de componentes.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Manutenção</span>
+            <span class="tech-tag">Hardware</span>
+            <span class="tech-tag">Cooling</span>
+          </div>
+          <a href="limpeza-computador.html" class="btn">Ver Detalhes</a>
+        </div>
+      </article>
+
+      <!-- Projeto 3 -->
+      <article class="project-card animate" data-delay="0.4s">
+        <div class="project-img">🔌</div>
+        <div class="project-content">
+          <h3 class="project-title">Instalação Elétrica Industrial (Miniatura)</h3>
+          <p class="project-desc">Modelo didático com disjuntores, contactores e botoeiras para estudo de comandos elétricos.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Eletrotécnica</span>
+            <span class="tech-tag">Comando</span>
+            <span class="tech-tag">Industrial</span>
+          </div>
+          <a href="contato.html" class="btn">Saber mais</a>
+        </div>
+      </article>
+
+      <!-- Projeto 4 -->
+      <article class="project-card animate" data-delay="0.5s">
+        <div class="project-img">📡</div>
+        <div class="project-content">
+          <h3 class="project-title">Rede Estruturada em Ambiente Comercial</h3>
+          <p class="project-desc">Implantação de rede de dados com cabeamento CAT6, patch panel e switch gerenciável.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Redes</span>
+            <span class="tech-tag">CAT6</span>
+            <span class="tech-tag">Switch</span>
+          </div>
+          <a href="contato.html" class="btn">Saber mais</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Marcos Dilvane. Todos os direitos reservados.</p>
+    <a href="index.html" class="back-link">← Voltar para a página inicial</a>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".project-card, header, footer");
+      cards.forEach((card, i) => {
+        card.style.transition = "all 0.6s ease";
+        setTimeout(() => {
+          card.style.opacity = 1;
+          card.style.transform = "translateY(0)";
+        }, 300 + i * 100);
+      });
+    });
+  </script>
+
+</body>
+</html>
