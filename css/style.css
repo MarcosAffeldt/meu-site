@@ -367,4 +367,14 @@ footer p {
     border-bottom: 1px solid #eee;
     width: 100%;
   }
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 120px; /* Afasta o conteúdo do menu em telas pequenas */
+  }
+  .nav-links {
+    z-index: 1000;
+  }
+}
+
 }
