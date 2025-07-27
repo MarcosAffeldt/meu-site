@@ -349,7 +349,7 @@ footer p {
     display: flex !important;
   }
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     width: 100vw;
@@ -358,6 +358,7 @@ footer p {
     gap: 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     display: none;
+    z-index: 1000;
   }
   .nav-links.open {
     display: flex;
@@ -367,14 +368,16 @@ footer p {
     border-bottom: 1px solid #eee;
     width: 100%;
   }
-
-@media (max-width: 600px) {
   main {
-    margin-top: 120px; /* Afasta o conteúdo do menu em telas pequenas */
+    margin-top: 120px; /* Afasta o conteúdo do menu */
   }
-  .nav-links {
-    z-index: 1000;
-  }
+  
 }
-
+@media (max-width: 600px) {
+  body.menu-open main {
+    margin-top: 120px;
+  }
+  body:not(.menu-open) main {
+    margin-top: 0;
+  }
 }

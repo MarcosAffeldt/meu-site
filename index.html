@@ -16,12 +16,12 @@
 </head>
 
 <script>
-  // Menu hambúrguer
   document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     hamburger.addEventListener('click', function() {
       navLinks.classList.toggle('open');
+      document.body.classList.toggle('menu-open', navLinks.classList.contains('open'));
     });
   });
 </script>
