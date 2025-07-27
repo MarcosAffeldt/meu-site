@@ -5,35 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projetos - Marcos Dilvane</title>
   <meta name="description" content="Projetos em elétrica, informática e automação por Marcos Dilvane." />
+  
+  <!-- Fonte Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Externo -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Menu de Navegação -->
-  <nav style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; width: 100%; z-index: 1000;">
-    <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 60px; font-family: 'Inter', sans-serif;">
-      <a href="index.html" style="font-weight: 600; color: #1a3c6e; font-size: 1.2rem;">Marcos Dilvane</a>
-      <div class="nav-links" style="display: flex; gap: 2rem;">
-        <a href="index.html" style="color: #1a3c6e; text-decoration: none; font-weight: 500;">Início</a>
-        <a href="projetos.html" style="color: #444; text-decoration: none; font-weight: 500;">Projetos</a>
-        <a href="limpeza-computador.html" style="color: #444; text-decoration: none; font-weight: 500;">Artigos</a>
-        <a href="contato.html" style="color: #444; text-decoration: none; font-weight: 500;">Contato</a>
-      </div>
+
+  <!-- Menu de Navegação -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Marcos Dilvane</a>
+      <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Início</a></li>
+        <li><a href="projetos.html" class="nav-link active">Projetos</a></li>
+        <li><a href="limpeza-computador.html" class="nav-link">Artigos</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
+      </ul>
     </div>
   </nav>
 
-  <header class="animate" style="margin-top: 60px; padding: 4rem 2rem; text-align: center; background: #f0f4ff;">
+  <!-- Seção Hero -->
+  <section id="projetos" class="hero">
     <h1>Meus Projetos</h1>
     <p>Conheça alguns trabalhos práticos em elétrica, informática e automação</p>
-  </header>
+  </section>
 
+  <!-- Conteúdo Principal -->
   <main>
     <div class="projects-grid">
-
+      
       <!-- Projeto 1 -->
-      <article class="project-card animate" data-delay="0.2s">
+      <article class="project-card section">
         <div class="project-img">⚡</div>
         <div class="project-content">
           <h3 class="project-title">Automação de Portão com Relé</h3>
@@ -48,7 +60,7 @@
       </article>
 
       <!-- Projeto 2: Limpeza de PC -->
-      <article class="project-card animate" data-delay="0.3s">
+      <article class="project-card section">
         <div class="project-img">🧹</div>
         <div class="project-content">
           <h3 class="project-title">Limpeza Completa de Computador</h3>
@@ -63,7 +75,7 @@
       </article>
 
       <!-- Projeto 3 -->
-      <article class="project-card animate" data-delay="0.4s">
+      <article class="project-card section">
         <div class="project-img">🔌</div>
         <div class="project-content">
           <h3 class="project-title">Instalação Elétrica Industrial (Miniatura)</h3>
@@ -78,7 +90,7 @@
       </article>
 
       <!-- Projeto 4 -->
-      <article class="project-card animate" data-delay="0.5s">
+      <article class="project-card section">
         <div class="project-img">📡</div>
         <div class="project-content">
           <h3 class="project-title">Rede Estruturada em Ambiente Comercial</h3>
@@ -95,23 +107,18 @@
     </div>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Marcos Dilvane. Todos os direitos reservados.</p>
-    <a href="index.html" class="back-link">← Voltar para a página inicial</a>
+    <p>Feito com foco em clareza, prática e compartilhamento.</p>
+    <div class="social-links">
+      <a href="mailto:contato@mdaffeldt.xyz">E-mail</a>
+      <a href="https://linkedin.com/in/marcos-dilvane-affeldt-36286a248" target="_blank">LinkedIn</a>
+      <a href="https://github.com/MarcosAffeldt" target="_blank">GitHub</a>
+    </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cards = document.querySelectorAll(".project-card, header, footer");
-      cards.forEach((card, i) => {
-        card.style.transition = "all 0.6s ease";
-        setTimeout(() => {
-          card.style.opacity = 1;
-          card.style.transform = "translateY(0)";
-        }, 300 + i * 100);
-      });
-    });
-  </script>
-
+  <!-- Script -->
+  <script src="js/script.js"></script>
 </body>
 </html>

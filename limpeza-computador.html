@@ -5,106 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Como Limpar um Computador | Marcos Dilvane</title>
   <meta name="description" content="Aprenda a fazer uma limpeza completa de computador: remova poeira, reaplique pasta térmica e melhore o desempenho do seu PC." />
+  
+  <!-- Fonte Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Externo -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- Menu de Navegação -->
-  <nav style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; width: 100%; z-index: 1000;">
-    <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 60px; font-family: 'Inter', sans-serif;">
-      <a href="index.html" style="font-weight: 600; color: #1a3c6e; font-size: 1.2rem;">Marcos Dilvane</a>
-      <div class="nav-links" style="display: flex; gap: 2rem;">
-        <a href="index.html" style="color: #1a3c6e; text-decoration: none; font-weight: 500;">Início</a>
-        <a href="projetos.html" style="color: #444; text-decoration: none; font-weight: 500;">Projetos</a>
-        <a href="limpeza-computador.html" style="color: #444; text-decoration: none; font-weight: 500;">Artigos</a>
-        <a href="contato.html" style="color: #444; text-decoration: none; font-weight: 500;">Contato</a>
-      </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Marcos Dilvane</a>
+      <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Início</a></li>
+        <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+        <li><a href="limpeza-computador.html" class="nav-link active">Artigos</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
+      </ul>
     </div>
   </nav>
 
-  <header class="animate" style="margin-top: 60px; padding: 4rem 2rem; text-align: center; background: #f0f4ff;">
+  <!-- Seção Hero -->
+  <section id="artigo" class="hero">
     <h1>Como Fazer uma Limpeza Completa de Computador</h1>
     <p>Passo a passo prático para remover poeira, reaplicar pasta térmica e melhorar o desempenho do seu PC</p>
-  </header>
+  </section>
 
+  <!-- Conteúdo Principal -->
   <main>
-    <div class="post-meta">
+    <div class="post-meta section">
       Por <strong>Marcos Dilvane</strong> • Atualizado em Abril 2025 • Manutenção de Hardware
     </div>
 
-    <p>Uma limpeza completa de computador pode parecer simples, mas é uma das tarefas mais importantes para manter seu PC funcionando com segurança, silêncio e desempenho. Com o tempo, a poeira se acumula no gabinete, nos ventiladores e no dissipador do processador, causando superaquecimento e até falhas.</p>
+    <section class="section">
+      <p>Uma limpeza completa de computador pode parecer simples, mas é uma das tarefas mais importantes para manter seu PC funcionando com segurança, silêncio e desempenho. Com o tempo, a poeira se acumula no gabinete, nos ventiladores e no dissipador do processador, causando superaquecimento e até falhas.</p>
 
-    <p>Neste guia, vou te mostrar <strong>como fazer uma limpeza profissional de computador</strong> passo a passo — exatamente como faço em meus atendimentos. E se quiser ver o processo em ação, assista ao vídeo completo:</p>
+      <p>Neste guia, vou te mostrar <strong>como fazer uma limpeza profissional de computador</strong> passo a passo — exatamente como faço em meus atendimentos. E se quiser ver o processo em ação, assista ao vídeo completo:</p>
 
-    <div class="video-container animate" style="animation-delay: 0.3s">
-      <iframe 
-        src="https://www.youtube.com/embed/8wvQ2AIBBZ4" 
-        title="Limpeza de Computador - Marcos Dilvane" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/8wvQ2AIBBZ4" 
+          title="Limpeza de Computador - Marcos Dilvane" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <h2>📌 O que você vai precisar</h2>
-    <ul>
-      <li>Chave de fenda (geralmente Philips #2)</li>
-      <li>Ar comprimido em lata (ou soprador)</li>
-      <li>Pincel de cerdas macias</li>
-      <li>Algodão ou cotonetes</li>
-      <li>Álcool isopropílico 99% (opcional, para limpeza profunda)</li>
-      <li>Pasta térmica nova (recomendado reaplicar no CPU)</li>
-      <li>Luvas descartáveis (opcional)</li>
-      <li>Local bem iluminado e sem corrente de ar</li>
-    </ul>
+      <h2>📌 O que você vai precisar</h2>
+      <ul>
+        <li>Chave de fenda (geralmente Philips #2)</li>
+        <li>Ar comprimido em lata (ou soprador)</li>
+        <li>Pincel de cerdas macias</li>
+        <li>Algodão ou cotonetes</li>
+        <li>Álcool isopropílico 99% (opcional, para limpeza profunda)</li>
+        <li>Pasta térmica nova (recomendado reaplicar no CPU)</li>
+        <li>Luvas descartáveis (opcional)</li>
+        <li>Local bem iluminado e sem corrente de ar</li>
+      </ul>
 
-    <h2>🔧 Passo 1: Desligue e desconecte tudo</h2>
-    <p>Desligue o PC e retire o cabo da tomada. Remova todos os cabos externos.</p>
+      <h2>🔧 Passo 1: Desligue e desconecte tudo</h2>
+      <p>Desligue o PC e retire o cabo da tomada. Remova todos os cabos externos.</p>
 
-    <h2>🔧 Passo 2: Abra o gabinete</h2>
-    <p>Retire os parafusos laterais e abra o gabinete com cuidado.</p>
+      <h2>🔧 Passo 2: Abra o gabinete</h2>
+      <p>Retire os parafusos laterais e abra o gabinete com cuidado.</p>
 
-    <h2>🔧 Passo 3: Use ar comprimido</h2>
-    <p>Sopre suavemente em fonte, ventiladores, placa-mãe e cooler do processador. Segure os ventiladores para não danificar.</p>
+      <h2>🔧 Passo 3: Use ar comprimido</h2>
+      <p>Sopre suavemente em fonte, ventiladores, placa-mãe e cooler do processador. Segure os ventiladores para não danificar.</p>
 
-    <h2>🔧 Passo 4: Limpeza manual</h2>
-    <p>Use pincel e cotonetes com álcool para áreas difíceis. Evite tocar em componentes sensíveis com os dedos.</p>
+      <h2>🔧 Passo 4: Limpeza manual</h2>
+      <p>Use pincel e cotonetes com álcool para áreas difíceis. Evite tocar em componentes sensíveis com os dedos.</p>
 
-    <div class="tip-box">
-      <strong>Atenção:</strong> Nunca use água ou produtos corrosivos. Use apenas álcool isopropílico.
-    </div>
+      <div class="tip-box">
+        <strong>Atenção:</strong> Nunca use água ou produtos corrosivos. Use apenas álcool isopropílico.
+      </div>
 
-    <h2>🔧 Passo 5: Reaplique pasta térmica</h2>
-    <p>Remova o cooler, limpe a pasta antiga e aplique uma nova gota no centro do processador.</p>
+      <h2>🔧 Passo 5: Reaplique pasta térmica</h2>
+      <p>Remova o cooler, limpe a pasta antiga e aplique uma nova gota no centro do processador.</p>
 
-    <h2>✅ Resultado</h2>
-    <p>Seu PC ficará mais frio, silencioso e com melhor desempenho. Recomendo limpeza a cada 6–12 meses.</p>
+      <h2>✅ Resultado</h2>
+      <p>Seu PC ficará mais frio, silencioso e com melhor desempenho. Recomendo limpeza a cada 6–12 meses.</p>
 
-    <div class="video-container animate" style="animation-delay: 0.4s">
-      <iframe 
-        src="https://www.youtube.com/embed/8wvQ2AIBBZ4" 
-        title="Vídeo: Limpeza Completa de Computador" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/8wvQ2AIBBZ4" 
+          title="Vídeo: Limpeza Completa de Computador" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="projetos.html" class="btn">Ver Mais Projetos</a>
-    </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="projetos.html" class="btn">Ver Mais Projetos</a>
+      </div>
+    </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Marcos Dilvane. Todos os direitos reservados.</p>
-    <a href="index.html" class="back-link">← Voltar para a página inicial</a>
+    <p>Feito com foco em clareza, prática e compartilhamento.</p>
+    <div class="social-links">
+      <a href="mailto:contato@mdaffeldt.xyz">E-mail</a>
+      <a href="https://linkedin.com/in/marcos-dilvane-affeldt-36286a248" target="_blank">LinkedIn</a>
+      <a href="https://github.com/MarcosAffeldt" target="_blank">GitHub</a>
+    </div>
   </footer>
 
-  <script>
-    document.querySelectorAll('.animate').forEach((el, i) => {
-      setTimeout(() => { el.style.opacity = 1; }, 400 + i * 100);
-    });
-  </script>
-
+  <!-- Script -->
+  <script src="js/script.js"></script>
 </body>
 </html>
